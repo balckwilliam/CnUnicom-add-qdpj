@@ -139,7 +139,7 @@ function membercenter() {
 
 function wangzuan() {
     # wangzuan: 1 time free each month.
-    [[ $(date | awk '{print $3}') -eq 1 ]] || return 0
+    [[ $(date "+%d") -eq 1 ]] || return 0
     echo; echo $(date) starting wangzuan...
     data="timestamp=$(date +%Y%m%d%H%M%S)&desmobile=$username&version=android%406.0100"
     curl -L -sA "$UA" -b $workdir/cookie -c $workdir/cookie_wz --data "$data" "https://m.client.10010.com/mobileService/openPlatform/openPlatLine.htm?to_url=https://wangzuan.10010.com/api/auth/login?source=2" >/dev/null
