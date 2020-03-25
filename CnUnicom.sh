@@ -251,14 +251,14 @@ fi
 function main() {
     #sleep $(shuf -i 1-10800 -n 1)
     login
-    #membercenter
-    #wangzuan
-    #club
-	activeprize
-    #qychinaunicom
+    membercenter
+    wangzuan
+    club
+    activeprize
+    qychinaunicom
     #openChg
     # clean
-    #rm -rf $workdir
+    rm -rf $workdir
     # exit
     echo; echo $(date) $username Accomplished.  Thanks!
 }
