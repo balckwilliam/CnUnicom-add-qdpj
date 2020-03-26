@@ -82,7 +82,7 @@ EOF
 
 function openChg() {
     # openChg for dingding 1 time each month. Just for me!
-    [[ $(date | awk '{print $3}') -eq 1 ]] || return 0
+    [[ $(date "+%d") -eq 1 ]] || return 0
     echo; echo $(date) starting dingding OpenChg...
     curl -sA "$UA" -b $workdir/cookie --data "querytype=02&opertag=0" "https://m.client.10010.com/mobileService/businessTransact/serviceOpenCloseChg.htm" >/dev/null
 }
